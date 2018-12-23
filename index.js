@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true}));
 
 app.get('/game', ctrl.getAllGames);
 app.get('/game/:type&:date', ctrl.getGameByTypeDate);
-app.post('/game/:id', ctrl.editGame);
+app.post('/game/:id', ctrl.editGameWinner);
 
 app.listen(port, 
     () => console.log(`listening on port ${port}`)
