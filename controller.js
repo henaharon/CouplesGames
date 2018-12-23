@@ -53,7 +53,7 @@ module.exports = {
         })
 
     },
-    editGameWinner(req, res, next){
+    editGame(req, res, next){
         mongoose
         .connect(url, options)
         .then(async() => {
