@@ -9,10 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(morgan('dev'));
 
-app.all('*',(req,res,next) => {
-    console.log("Hello client for details enter couplesgames1.herokuapp.com/api ")
-    next();
-});
+
 
 app.get('/api', (req,res) => {
     res.redirect("https://documenter.getpostman.com/view/5677398/Rzn6v2mb")
@@ -21,6 +18,10 @@ app.get('/api', (req,res) => {
 app.get('/game', ctrl.getAllGames);
 app.get('/game/:type&:date', ctrl.getGameByTypeDate);
 app.post('/game/:id', ctrl.editGame);
+
+app.all('*',(req,res,next) => {
+    res.send("Wrong route");
+});
 
 
 
