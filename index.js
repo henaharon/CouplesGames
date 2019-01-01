@@ -20,7 +20,7 @@ app.get('/game/:type&:date', ctrl.getGameByTypeDate);
 app.post('/game/:id', ctrl.editGame);
 
 app.all('*',(req,res,next) => {
-    res.send("Wrong route");
+    res.send("Wrong route, try https://documenter.getpostman.com/view/5677398/Rzn6v2mb for details.");
 });
 
 
